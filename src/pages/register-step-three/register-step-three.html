@@ -1,0 +1,96 @@
+<!--
+  Generated template for the RegisterStepTwoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+<ion-header>
+  <ion-navbar color="primary" style="background-color: #ff6600 !important">
+    <ion-title style="color: #fff !important;">Register 3/3</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-img">
+  <div class="main-content">
+
+    <div padding  style="width: 100%;">
+    <form [formGroup]="registerStepThreePageForm">
+      <ion-list>
+        <ion-item padding-right>
+          <ion-label><ion-icon name="contact"></ion-icon></ion-label>
+          <ion-input [(ngModel)]="registerStepThreeData.username" [formControl]="username" id="username" type="text" required placeholder="Enter Your Username"></ion-input>
+        </ion-item><div style="font-size:20px !important;">&nbsp;</div>
+        <ion-item padding-right>
+          <ion-label><ion-icon name="contact"></ion-icon></ion-label>
+          <ion-input [(ngModel)]="registerStepThreeData.password" [formControl]="password" id="password" type="password" required placeholder="Enter A Valid Password"></ion-input>
+        </ion-item><div style="font-size:20px !important;">&nbsp;</div>
+        <ion-item padding-right>
+          <ion-label><ion-icon name="contact"></ion-icon></ion-label>
+          <ion-input [(ngModel)]="registerStepThreeData.confirm_password" [formControl]="confirm_password" id="confirm_password" type="password" required placeholder="Confirm Your Password"></ion-input>
+        </ion-item><div style="font-size:20px !important;">&nbsp;</div>
+
+      </ion-list>
+	  <div ion-row col-12 justify-content-center>
+		  <button color="default" (click)="doRegisterStepThree(registerStepThreeData)" ion-button round style="font-size:1.7rem !important; background-color: #ff6600 !important" col-5 strong>Cancel</button>
+		  <div style="width:20px !important">&nbsp;</div>
+		  <button color="secondary" (click)="doRegisterStepThree(registerStepThreeData)" ion-button round col-5 style="font-size:1.7rem !important; background-color: #00CC66 !important;" strong>Finish</button>
+	  </div>
+		
+		<div style="border-bottom:2px solid #fff; padding:20px;" ion-row>&nbsp;</div>
+		
+    </form>
+  </div>
+  </div>
+</ion-content>
+-->
+
+
+
+
+<ion-header>
+  <ion-navbar color="primary" style="background-color: #fff !important">
+    <ion-title style="color: #000 !important; text-align: right; font-size: 1.5rem">
+		<span style="color: #000 !important; text-align: right; font-size: 1.5rem">Step 2 of 3</span>
+	</ion-title>
+	<!--<ion-buttons start> <button (click)="openModal()" style="background-color: #EC2E24 !important"> <ion-icon name="arrow-back" style="color:#fff !important"></ion-icon> </button> </ion-buttons>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="tutorial-page">
+		<!--<ion-toolbar>
+			<ion-buttons end>
+			  <button ion-button color="primary">Skip</button>
+			</ion-buttons>
+		</ion-toolbar>-->
+		<form [formGroup]="registerStepThreePageForm">
+			<ion-item padding-right>
+				<strong style="font-size: 2rem !important; white-space: normal">What's Your Mobile Number & Email Address</strong><br>
+				<span style="white-space: normal">Provide these to enable us create a login account for you.</span>
+			</ion-item>
+			
+			<!--<ion-item padding-right style="background-color: #E2F5D6 !important; font-size: 1.8rem !important; padding: 10px !Important; border-bottom: 3px #fff solid !important">
+				<button ion-button full color="secondary"  small>Select Your Country Code</button>
+			</ion-item>-->
+			<ion-item padding-right style="background-color: #E2F5D6 !important; font-size: 1.8rem !important; padding: 10px !Important; border-bottom: 3px #fff solid !important">
+				<ion-input style="background-color: #E2F5D6 !important; font-size: 1.8rem !important; padding: 7px !Important" [(ngModel)]="registerStepThreeData.mobileNumber" formControlName="mobileNumber" id="mobileNumber" type="tel" required placeholder="Mobile Number*"></ion-input>
+				<button style="padding: 0px !important; background-color: #E2F5D6 !important; font-size: 1.0em !important; box-shadow: none !important; webkit-box-shadow: none !important; color: #000 !important" ion-button item-start icon-start small (click)="openMobileNumberModal()">
+					<ion-avatar item-start>
+						<img src="assets/imgs/country/zm.png">
+					</ion-avatar>
+					+260
+				</button>
+			</ion-item>
+			
+			<ion-item padding-right style="background-color: #E2F5D6 !important; font-size: 1.8rem !important; padding: 10px !Important; border-bottom: 3px #fff solid !important;">
+			  <ion-input style="background-color: #E2F5D6 !important; font-size: 1.8rem !important; padding: 7px !Important" [(ngModel)]="registerStepThreeData.emailAddress" formControlName="emailAddress" id="emailAddress" type="email" required placeholder="Email Address*"></ion-input>  
+			</ion-item>
+			
+		</form>
+</ion-content>
+
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom">
+		<button ion-button full color="secondary" (click)="doRegisterStepThree(registerStepThreeData)" large>Next</button>
+	</ion-toolbar>
+</ion-footer>
